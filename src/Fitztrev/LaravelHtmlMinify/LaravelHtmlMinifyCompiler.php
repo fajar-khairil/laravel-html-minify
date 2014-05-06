@@ -42,7 +42,12 @@ class LaravelHtmlMinifyCompiler extends BladeCompiler
             $this->setPath($path);
         }
 
-        $contents = $this->compileMinify( $this->compileString($this->files->get($this->getPath())) );
+        if ($this->_config['enabled'] === true) {
+            $contents = $this->compileMinify( $this->compileString($this->files->get($this->getPath())) );
+        }else{
+            $contents = $this->compileString($this->files->get($this->getPath()));
+        }
+        
 
         if ( ! is_null($this->cachePath))
         {

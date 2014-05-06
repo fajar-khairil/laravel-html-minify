@@ -2,7 +2,7 @@
 return array(
     'views' => array(
         // Turn on/off minification
-        'enabled' => true,
+        'enabled' => false,
         // If you are using a javascript framework that conflicts
         // with Blade's tags, you can change them here
         'blade' => array(
