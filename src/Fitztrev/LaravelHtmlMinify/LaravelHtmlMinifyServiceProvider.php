@@ -37,12 +37,10 @@ class LaravelHtmlMinifyServiceProvider extends ViewServiceProvider
         // instance to pass into the engine so it can compile the views properly.
         $app->bindShared('blade.compiler', function($app)
         {
-            $cache = $app['path.storage'].'/views';
-
             return new LaravelHtmlMinifyCompiler(
                 $app['config']->get('laravel-html-minify::views'),
                 $app['files'], 
-                $cache
+                $app['path.storage'].'/views'
             );
         });
 

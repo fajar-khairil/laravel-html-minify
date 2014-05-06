@@ -47,4 +47,3 @@ If you are using a javascript framework that conflicts with Blade's tags, you ca
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/fitztrev/laravel-html-minify/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
